@@ -169,6 +169,43 @@
             var subset = new HashSet<int> { 1, 2 };
             Console.WriteLine("Is subset? " + subset.IsSubsetOf(setA));
             #endregion
+
+            #region Exercise 5: Print Queue Simulator
+            Queue<string> queue = new Queue<string>();
+
+            // Add documents
+            queue.Enqueue("Report.pdf");
+            queue.Enqueue("Invoice.pdf");
+            queue.Enqueue("Letter.docx");
+            queue.Enqueue("Resume.pdf");
+            queue.Enqueue("Photo.jpg");
+
+            // 1. Print queue + count
+            Console.WriteLine("Queue: " + string.Join(", ", queue));
+            Console.WriteLine("Count: " + queue.Count);
+
+            // 2. Peek
+            Console.WriteLine("Next document: " + queue.Peek());
+
+            // 3. Process queue
+            while (queue.Count > 0)
+            {
+                string doc = queue.Dequeue();
+                Console.WriteLine("Printing: " + doc);
+            }
+
+            // 4. TryDequeue on empty queue
+            bool success = queue.TryDequeue(out string result);
+            Console.WriteLine("TryDequeue success? " + success);
+            Console.WriteLine("Result: " + (result ?? "null"));
+
+            /*
+             Explanation:
+             - TryDequeue returns false
+             - result = null (default for string)
+             - No exception thrown (safe)
+            */
+            #endregion
         }
     }
 }
