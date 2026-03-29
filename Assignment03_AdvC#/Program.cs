@@ -80,6 +80,49 @@
             //    Console.WriteLine($"{entry.Key} : {entry.Value}");
             //}
             #endregion
+
+            #region Exercise 3: Phone Book
+            //// 1. Create phone book
+            //Dictionary<string, string> phoneBook = new Dictionary<string, string>()
+            //{
+            //    {"Ahmed", "0100"},
+            //    {"Sara", "0111"},
+            //    {"Ali", "0122"},
+            //    {"Mona", "0133"}
+            //};
+
+            //// 2. Add/update using []
+            //phoneBook["Ahmed"] = "9999";
+            //phoneBook["Omar"] = "0144";
+
+            //// 3. Add duplicate using Add()
+            //try
+            //{
+            //    phoneBook.Add("Ahmed", "0000");
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("Error: " + ex.Message);
+            //}
+
+            //// 4. TryAdd
+            //bool added = phoneBook.TryAdd("Ahmed", "0000");
+            //Console.WriteLine("TryAdd success? " + added);
+
+            //// 5. Search for non-existing contact
+            //Console.WriteLine("Contains 'Yara'? " + phoneBook.ContainsKey("Yara"));
+
+            //// 6. Get with fallback
+            //string result = phoneBook.TryGetValue("Yara", out string value)
+            //    ? value
+            //    : "Not Found";
+
+            //Console.WriteLine("Yara: " + result);
+
+            //// 7. Print keys and values
+            //Console.WriteLine("Keys: " + string.Join(", ", phoneBook.Keys));
+            //Console.WriteLine("Values: " + string.Join(", ", phoneBook.Values));
+            #endregion
         }
     }
 }
