@@ -123,6 +123,52 @@
             //Console.WriteLine("Keys: " + string.Join(", ", phoneBook.Keys));
             //Console.WriteLine("Values: " + string.Join(", ", phoneBook.Values));
             #endregion
+
+            #region Exercise 4: Unique Email Validator
+            // 1. Case-insensitive HashSet
+            var emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+            // 2. Add emails
+            emails.Add("ahmed@test.com");
+            emails.Add("AHMED@test.com");
+            emails.Add("sara@test.com");
+            emails.Add("Sara@Test.Com");
+
+            // 3. Print Count
+            Console.WriteLine("Count: " + emails.Count);
+
+            // Print actual values
+            Console.WriteLine("Stored Emails:");
+            foreach (var e in emails)
+                Console.WriteLine(e);
+            /*
+             Explanation:
+             Count = 2
+             Because HashSet ignores case,
+             so duplicates like "ahmed@test.com" and "AHMED@test.com" are considered same
+            */
+
+            // 4. Create sets
+            var setA = new HashSet<int> { 1, 2, 3, 4, 5 };
+            var setB = new HashSet<int> { 4, 5, 6, 7, 8 };
+
+            // 5. Operations
+            var union = new HashSet<int>(setA);
+            union.UnionWith(setB);
+            Console.WriteLine("Union: " + string.Join(", ", union));
+
+            var intersect = new HashSet<int>(setA);
+            intersect.IntersectWith(setB);
+            Console.WriteLine("Intersect: " + string.Join(", ", intersect));
+
+            var except = new HashSet<int>(setA);
+            except.ExceptWith(setB);
+            Console.WriteLine("Except (A - B): " + string.Join(", ", except));
+
+            // 6. Subset check
+            var subset = new HashSet<int> { 1, 2 };
+            Console.WriteLine("Is subset? " + subset.IsSubsetOf(setA));
+            #endregion
         }
     }
 }
