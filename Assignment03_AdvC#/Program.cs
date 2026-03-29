@@ -206,6 +206,44 @@
              - No exception thrown (safe)
             */
             #endregion
+
+            #region Exercise 6: Browser History (Undo)
+            //Stack<string> history = new Stack<string>();
+
+            //// 1. Push URLs
+            //history.Push("google.com");
+            //history.Push("github.com");
+            //history.Push("stackoverflow.com");
+            //history.Push("youtube.com");
+            //history.Push("claude.ai");
+
+            //// 2. Current page
+            //Console.WriteLine("Current page: " + history.Peek());
+
+            //// 3. Go back 3 times
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    string leftPage = history.Pop();
+            //    Console.WriteLine("Leaving: " + leftPage);
+            //}
+
+            //// 4. Current page after back
+            //Console.WriteLine("Now at: " + history.Peek());
+
+            //// 5. TryPop on empty stack
+            //history.Clear(); // force empty
+
+            //bool success = history.TryPop(out string page);
+            //Console.WriteLine("TryPop success? " + success);
+            //Console.WriteLine("Page: " + (page ?? "null"));
+
+            ///*
+            // Explanation:
+            // - TryPop returns false
+            // - page = null
+            // - No exception (safe)
+            //*/
+            #endregion
         }
     }
 }
