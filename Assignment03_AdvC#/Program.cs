@@ -41,6 +41,45 @@
 
             //Console.WriteLine("String list: " + string.Join(" | ", gradeStrings));
             #endregion
+
+            #region Exercise 2: Leaderboard
+            //// 1. Add players
+            //SortedList<int, string> leaderboard = new SortedList<int, string>()
+            //{
+            //    {500, "Ahmed"},
+            //    {200, "Sara"},
+            //    {800, "Ali"},
+            //    {350, "Mona"}
+            //};
+
+            //// 2. Print sorted entries
+            //foreach (var entry in leaderboard)
+            //{
+            //    Console.WriteLine($"{entry.Key} : {entry.Value}");
+            //}
+
+            //// 3. First key & value
+            //Console.WriteLine("First Key: " + leaderboard.Keys[0]);
+            //Console.WriteLine("First Value: " + leaderboard.Values[0]);
+
+            //// 4. Check if score 500 exists
+            //Console.WriteLine("Contains 500? " + leaderboard.ContainsKey(500));
+
+            //// 5. Safely get player with score 999
+            //if (leaderboard.TryGetValue(999, out string player))
+            //    Console.WriteLine(player);
+            //else
+            //    Console.WriteLine("Score 999 not found");
+
+            //// 6. Remove score 200
+            //leaderboard.Remove(200);
+
+            //Console.WriteLine("After removal:");
+            //foreach (var entry in leaderboard)
+            //{
+            //    Console.WriteLine($"{entry.Key} : {entry.Value}");
+            //}
+            #endregion
         }
     }
 }
